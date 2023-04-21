@@ -1,4 +1,4 @@
-package com.eCart.testBase;
+package com.bnpadvisor.testBase;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

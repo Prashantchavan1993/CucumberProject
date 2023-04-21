@@ -1,6 +1,6 @@
-package com.eCart.testUtils;
+package com.bnpadvisor.testUtils;
 
-import com.eCart.testBase.TestBase;
+import com.bnpadvisor.testBase.TestBase;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;

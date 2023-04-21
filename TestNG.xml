@@ -3,7 +3,7 @@
 <suite name="eCart_Tests">
     <test name="eCart Test">
         <classes>
-            <class name="com.eCart.TC1_TestSummary_Test" />
+            <class name="com.bnpadvisor />
         </classes>
     </test>
 </suite>

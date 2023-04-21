@@ -1,12 +1,10 @@
-package com.eCart.pages;
+package com.bnpadvisor.pages;
 
-import com.eCart.testBase.TestBase;
+import com.bnpadvisor.testBase.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.io.FileInputStream;
 
 public class LoginPage extends TestBase {
     WebDriver driver;

@@ -1,7 +1,7 @@
-package com.eCart.stepdefinitions;
+package com.bnpadvisor.stepdefinitions;
 
-import com.eCart.pages.LoginPage;
-import com.eCart.testBase.TestBase;
+import com.bnpadvisor.pages.LoginPage;
+import com.bnpadvisor.testBase.TestBase;
 import io.cucumber.java.en.Given;
 
 public class LoginSteps extends TestBase {
