@@ -63,12 +63,14 @@ public class TestBase {
 
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-            try {
-                WebDriver rwd = new RemoteWebDriver(new URL("url of node"), capabilities);
-                webDriver.set(rwd);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            WebDriver cd = new ChromeDriver(options);
+            webDriver.set(cd);
+//            try {
+//                WebDriver rwd = new RemoteWebDriver(new URL("url of node"), capabilities);
+//                webDriver.set(rwd);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
         }
         webDriver.get().manage().window().maximize();
         webDriver.get().get(prop.getProperty("testEnvironmentUrl"));
