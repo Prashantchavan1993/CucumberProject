@@ -33,4 +33,4 @@ test:
     paths:
       - target/surefire-reports/*
       - ScreenShots/*
-  expire_in: 1h
+    expire_in: 1h
