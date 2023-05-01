@@ -1,0 +1,36 @@
+image: maven:3.6.3-jdk-8
+
+variables:
+  # Use the latest version of ChromeDriver by default
+  CHROME_DRIVER_VERSION: latest
+
+before_script:
+  # Install the necessary packages
+  - apt-get update
+  - apt-get install -y unzip libglib2.0-0 libnss3
+
+  # Install Google Chrome
+  - echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+  - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+  - apt-get update
+  - apt-get install -y google-chrome-stable
+
+  # Download and install ChromeDriver
+  - wget https://chromedriver.storage.googleapis.com/108.0.5359.71/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - mv chromedriver /usr/local/bin/chromedriver
+  - chmod +x /usr/local/bin/chromedriver
+
+test:
+  script:
+    # Run the tests using Maven and TestNG
+    - mvn test
+
+  artifacts:
+    when: always
+    name: "report"
+    paths:
+    - target/surefire-reports/*
+    - ScreenShots/*
+    expire_in: 1 h
+
