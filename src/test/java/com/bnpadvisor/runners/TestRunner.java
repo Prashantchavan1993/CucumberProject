@@ -7,7 +7,6 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features",
         glue = "com.bnpadvisor.stepdefinitions",
         plugin = {"pretty", "html:src/cucumber.html"}
-//        tags = "@Dummy"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

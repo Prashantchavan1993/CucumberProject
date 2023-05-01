@@ -33,4 +33,5 @@ test:
     paths:
       - target/surefire-reports/*
       - ScreenShots/*
-    expire_in: 1h
+      - src/cucumber.html
+    expire_in: 1 h
