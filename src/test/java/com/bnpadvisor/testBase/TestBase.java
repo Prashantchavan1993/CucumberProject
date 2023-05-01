@@ -58,6 +58,8 @@ public class TestBase {
             options.addArguments("--disable-gpu");
             options.addArguments("--log-level=3");
             options.addArguments("--silent");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless");
 
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
